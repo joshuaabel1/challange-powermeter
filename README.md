@@ -10,6 +10,7 @@
 
 ```
 python -m venv env-powermeter
+env-powermeter\Scripts\activate
 ```
 2) Instalamos las dependencias
 ```
