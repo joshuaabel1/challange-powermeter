@@ -13,14 +13,43 @@ python -m venv env-powermeter
 env-powermeter\Scripts\activate
 ```
 2) Instalamos las dependencias
+
+En la raiz del proyecto.
+
+### PASO 1: 
+### Abrir una terminal en la carpeta del proyecto
+
 ```
-pip install -r requirements.txt
+docker compose up -d
 ```
-3) Creamos las tablas en la base de datos
+
+### Paso 2:
+### Obtener el ContainerId del service "web"
+
 ```
-python manage.py makemigrations
-python manage.py migrate
+docker ps
 ```
+
+### insertar captura de pantalla para mostrar cual es el ID a copiar
+
+### ingresar al service "web" y ejecutar el comando reemplazando <WebContainerId> por el CONTAINER_ID copiado en el paso anterior
+
+```
+docker exec -it <WebContainerId> bash
+```
+
+### recolectar migraciones
+
+```
+python3 manage.py makekigrations
+```
+
+### ejecutar migraciones
+
+```
+python3 manage.py migrate
+```
+
 
 ### Endpoints
 
@@ -121,11 +150,3 @@ Tests :
 ``` 
 python manage.py test meters
 ```
-
-Iniciar contenedor:
-
-En la raiz del proyecto.
-
-``` 
-docker compose up
-``` 
