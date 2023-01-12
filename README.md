@@ -117,8 +117,16 @@ Content-Type: application/json
 ```
 
 
-tests :
+Tests :
 
 ``` 
 python manage.py test meters
 ```
+
+Iniciar contenedor:
+
+En la raiz del proyecto.
+
+``` 
+docker compose up
+``` 
