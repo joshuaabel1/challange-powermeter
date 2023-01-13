@@ -50,6 +50,11 @@ ejecutar migraciones
 python3 manage.py migrate
 ```
 
+correr los test
+
+``` 
+python3 manage.py test meters
+```
 
 ### Endpoints
 
@@ -143,10 +148,4 @@ Content-Type: application/json
 {
     "avg_of_consumption": 2.5
 }
-```
-
-Tests :
-
-``` 
-python manage.py test meters
 ```
