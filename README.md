@@ -149,3 +149,40 @@ Content-Type: application/json
     "avg_of_consumption": 2.5
 }
 ```
+
+### Defensa del modelo de estructura:
+
+La estructura elegida es la básica de Django, con una carpeta de test que sirve como guía para la creación de los endpoints. En caso de requerir más aplicaciones se podría crear una carpeta adicional (apps) para alojar estas y dividir el archivo settings para adaptarlo a las diferentes instancias del proyecto. Esto permite una fácil escalabilidad y organización del proyecto en caso de necesitar agregar más funcionalidades en el futuro.
+
+```
+powermeter/
+    manage.py
+    myproject/
+        __init__.py
+        urls.py
+        asgi.py
+        wsgi.py
+        settings/
+            __init__.py
+            base.py
+            local.py
+            prod.py
+    apps/
+        __init__.py
+        meters/
+            __init__.py
+            admin.py
+            models.py
+            serializer.py
+            tests.py
+            views.py
+        auth/
+            __init__.py
+            admin.py
+            models.py
+            serializer.py
+            tests.py
+            views.py
+    media/
+    static/
+```
