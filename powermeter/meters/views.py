@@ -40,6 +40,9 @@ class MaxMeasurementAPIView(APIView):
     def get(self, request, id):
         if not Meter.objects.filter(id=id).exists():
             return Response({"error": "Meter does not exist."}, status=status.HTTP_404_NOT_FOUND)
+        if not self.get_queryset().exists():
+            return Response({"error": "Measurements for this meter does not exist."},
+                            status=status.HTTP_404_NOT_FOUND)
 
         max_measurement = self.get_queryset().latest('consumption')
         serializer = MeasurementSerializer(max_measurement)

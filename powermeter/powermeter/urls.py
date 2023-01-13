@@ -1,6 +1,14 @@
 from django.contrib import admin
 from django.urls import path
-from meters.views import MeterCreateAPIView, MeasurementCreateAPIView, MaxMeasurementAPIView, MinMeasurementAPIView, AverageConsumptionAPIView, TotalConsumptionAPIView
+from meters.views import (
+    MeterCreateAPIView, 
+    MeasurementCreateAPIView, 
+    MaxMeasurementAPIView, 
+    MinMeasurementAPIView, 
+    AverageConsumptionAPIView, 
+    TotalConsumptionAPIView
+)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
