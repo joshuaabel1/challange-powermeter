@@ -152,7 +152,7 @@ Content-Type: application/json
 
 ### Defensa del modelo de estructura:
 
-La estructura elegida es la básica de Django, con una carpeta de test que sirve como guía para la creación de los endpoints. En caso de requerir más aplicaciones se podría crear una carpeta adicional (apps) para alojar estas y dividir el archivo settings para adaptarlo a las diferentes instancias del proyecto. Esto permite una fácil escalabilidad y organización del proyecto en caso de necesitar agregar más funcionalidades en el futuro.
+La estructura elegida es la básica de Django, con un archivo de test que sirve como guía para la creación de los endpoints. En caso de requerir más aplicaciones se podría crear una carpeta adicional (apps) para alojar estas y dividir el archivo settings para adaptarlo a las diferentes instancias del proyecto. Esto permite una fácil escalabilidad y organización del proyecto en caso de necesitar agregar más funcionalidades en el futuro.
 
 ```
 powermeter/
