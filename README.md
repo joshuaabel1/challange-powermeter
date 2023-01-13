@@ -86,7 +86,7 @@ Content-Type: application/json
 
 Obtener medición máxima:
 
-Para obtener la medición máxima de un medidor específico, hacer una petición HTTP GET a la url `/measurement/[id_del_medidor]/.
+Para obtener la medición máxima de un medidor específico, hacer una petición HTTP GET a la url `/measurement/[id_del_medidor]/max/.
 
 Ejemplo:
 
